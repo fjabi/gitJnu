@@ -1,0 +1,85 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Homework 7}
+\author{Varun Aggarwal}
+\begin{document}
+\maketitle
+
+\newpage
+\noindent
+Ques 2. Let the random variable $X$ have the pmf \\
+$$f(x) = (|x| +1)^2/9  , \hspace{10mm}    x=-1,0,1$$
+\hspace{10mm} Compute $E(X),E(X^2) and E(3X^2 - 2X + 4)$\\
+\\
+Ans 2. Since 
+\begin{align*}
+E(X) &= \sum_{} Xf(x) \\
+     &= -1*4/9 + 0*1/9 + 1*4/9 \\
+     &= 0,
+\end{align*}
+
+\begin{align*}
+E(X^2) &= \sum_{} X^2f(x)\\
+        &= 1*4/9 + 0*1/9 + 1*4/9\\
+        &= 8/9\\
+        &= 0.88
+\end{align*}
+\hspace{10mm} and
+\begin{align*}
+E(3X^2-2X+4) &= E(3X^2) - E(2X) + E(4)\\
+             &= (3*E(X^2) - 2E(X) + 4)\\
+             &= 3*8/9 - 2*0 + 4\\
+             &= 20/3\\
+             &= 6.66\\
+\end{align*}
+\\
+Ques 3. Let the random variable $X$ be the number of days that a certain needs to be in the hospital. Suppose X has the pmf\\
+$$ f(x) = (5-x)/10, \hspace{10mm} x=1,2,3,4.\\$$
+If the patient is to recieve \$200 from an insurance company for each of the first two days in the hospital and \$100 for each day after the first two days, what is the expected payment for the hospitalization?\\
+\\
+Ans 3. Let P(X) where X=1,2,3,4 be payment recieved for hospitalization and X be number of days.\\
+\[  P(X) = \left \{
+\begin{array}{ll}
+			\$200 & X=1, \\
+			\$400 & X=2, \\
+			\$500 & X=3, \\
+			\$600 & X=4.
+\end{array} 
+\right. \]
+\noindent
+Expected payment for hospitalization = E(P(X)),\hspace{5mm} X=1,2,3,4\\
+= \$200*4/10 + \$400*3/10 + \$500*2/10 + \$600*1/10\\
+= \$80 + \$120 + \$100 + \$60 \\
+= \$360\\
+\\
+
+Ques 8. Let $X$ be a random variable with support \{1,2,3,5,15,25,50\}, each point of which has the same probability 1/7. Argue that $c=5$ is the value that minimizes $h(c) = E(|X-c|)$. Compare $c$ with the value of $b$ that minimizes $g(b) = E[(X-b)^2]$.\\
+\\
+Ans 8. For 
+\begin{align*}
+c=5,\hspace{5mm} h(c) &= E(|X-5|)\\
+          &=|-4|*1/7+|-3|*1/7+|-2|*1/7+0*1/7+10*1/7+20*1/7+45*1/7\\
+          &=84/7\\
+          &=12
+\end{align*} 
+now checking for
+\begin{align*}
+c=4,\hspace{5mm} h(c) &= E(|X-4|)\\
+          &=|-3|*1/7+|-2|*1/7+|-1|*1/7+1*1/7+11*1/7+21*1/7+46*1/7\\
+          &=85/7\\
+          &=12.14
+\end{align*} 
+and
+\begin{align*}
+c=6,\hspace{5mm} h(c) &= E(|X-6|)\\
+          &=|-5|*1/7+|-4|*1/7+|-3|*1/7+|-1|*1/7+9*1/7+19*1/7+44*1/7\\
+          &=85/7\\
+          &=12.14.
+\end{align*} 
+Since for $h(c)$ for $c=4,6$ is greater than $h(c)$ for $c=5$, which indicates $h(5)$ is least in its neighbourhood also $h(c)$ is a function with only one minima, it implies $h(5)$ minimizes $h(c)$.\\
+
+
+\end{document}
